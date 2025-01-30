@@ -1,0 +1,1 @@
+curl https://api.themeparks.wiki/v1/entity/e957da41-3552-4cf6-b636-5babc5cbc4e5/live > live.json

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Park Info</title>
+    <style>
+      #park-list {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+      }
+
+      select {
+        width: 100%;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      th {
+        background-color: black;
+        color: white;
+      }
+
+      * {
+        font-size: 16pt;
+      }
+
+      td,
+      th {
+        text-align: left;
+        padding-right: 0.5em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      td > div {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      td:last-child,
+      th:last-child {
+        padding-right: 0;
+      }
+
+      tr:nth-child(even) {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <select id="park-list"></select>
+    <br />
+    <select id="attraction-list-options">
+      <option value="SHORTEST" selected>Shortest Standby</option>
+      <option value="SOONEST">Soonest Return Time</option>
+      <option value="NEAREST">Nearest</option>
+    </select>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 50%">Attraction</th>
+          <th style="width: 15%">Wait</th>
+          <th style="width: 20%">Return</th>
+          <th style="width: 15%">Distance</th>
+        </tr>
+      </thead>
+      <tbody id="attraction-list"></tbody>
+    </table>
+    <br />
+
+    <select id="show-list-options">
+      <option value="SHORTEST" selected>Shortest Standby</option>
+      <option value="SOONEST">Soonest Return Time</option>
+      <option value="NEAREST">Nearest</option>
+    </select>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 50%">Show</th>
+          <th style="width: 15%">Wait</th>
+          <th style="width: 20%">Return</th>
+          <th style="width: 20%">Times</th>
+          <th style="width: 15%">Distance</th>
+        </tr>
+      </thead>
+      <tbody id="show-list"></tbody>
+    </table>
+    <br />
+
+    <select id="restaurant-list-options">
+      <option value="SHORTEST" selected>Shortest Wait</option>
+      <option value="NEAREST">Nearest</option>
+    </select>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 50%">Restaurant</th>
+          <th style="width: 15%">Wait</th>
+          <th style="width: 20%">Party Wait</th>
+          <th style="width: 15%">Distance</th>
+        </tr>
+      </thead>
+      <tbody id="restaurant-list"></tbody>
+    </table>
+    <script src="index.js"></script>
+  </body>
+</html>

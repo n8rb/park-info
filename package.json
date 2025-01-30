@@ -1,0 +1,26 @@
+{
+  "name": "park-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "build:watch": "esbuild index.ts --outfile=index.js --sourcemap --bundle --minify --watch --target=chrome58,firefox57,safari11,edge16",
+    "serve": "python3 -m http.server 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n8rb/park-info.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n8rb/park-info/issues"
+  },
+  "homepage": "https://github.com/n8rb/park-info#readme",
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "esbuild": "^0.24.2",
+    "prettier": "^3.4.2"
+  }
+}
